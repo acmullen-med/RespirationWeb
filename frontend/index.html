@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>RespirationWebApp</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color:lightgrey;" border="500">
+
+  <!-- Navigation -->
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <br><br><br>
+        <div class="row">
+          <div class="col"> Weather: </div>
+          <div class="col"> Alarms: NONE</div>
+        </div>
+        <br><br><br><br><br><br><br>
+        <!--<h1 class="mt-5">A Bootstrap 4 Starter Template</h1>-->
+        <h1 id="txt" style=font-size:130px></h1>
+        <p id="date"></p>
+        <head>
+          <script>
+          function startTime() {
+            var today = new Date();
+            var noonNight = false;
+            var h = today.getHours();
+            if(h > 12) {
+              h = h - 12;
+              noonNight = true;
+            }
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            if(noonNight == false) {
+              document.getElementById('txt').innerHTML = h + ":" + m + ":" + s + " AM";
+            }
+            else {
+              document.getElementById('txt').innerHTML = h + ":" + m + ":" + s + " PM";
+            }
+            var t = setTimeout(startTime, 500);
+          }
+          function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+          }
+          </script>
+          </head>
+          <body onload="startTime()">
+          </body>
+        <head>
+        <script>
+          var today = new Date();
+          document.getElementById('date').innerHTML = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear();
+        </script>
+        </head>
+        <br><br><br><br><br><br><br>
+        <div class="container">
+          <div class="row">
+            <div class="col"> 
+              <a href="https://www.google.com"> 
+                <img border="0" alt="W3Schools" src="alarm.png" width="50" height="50">
+              </a>
+            </div>
+            <div class="col"> 
+              <a href="https://www.bing.com">
+                <img border="0" alt="W3Schools" src="monitor.png" width="50" height="50">
+              </a>
+            </div>
+            <div class="col"> 
+              <a href="https://www.yahoo.com">
+                <img border="0" alt="W3Schools" src="settings.png" width="50" height="50">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

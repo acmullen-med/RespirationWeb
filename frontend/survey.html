@@ -7,62 +7,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <script src="script.js"></script>
 
-  <title>Bare - Start Bootstrap Template</title>
+  <title>RespirationWebApp</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-</head>
-
-<body style="background-color:lightgrey;" border="500">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Page Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
-        <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
-        <ul class="list-unstyled">
-          <li>Bootstrap 4.3.1</li>
-          <li>jQuery 3.4.1</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-</body>
+</head>
 
+<body style="background-color:black;" border="500">
+
+  <!-- Function to load time, date, and question -->
+  <body onload="startTime()"> </body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <br><br><br>
+        <!-- TOP ROW: DATE AND TIME -->
+        <div class="row">
+          <div class="col">
+            <!-- Displays time -->
+            <h2 id="txt" style="color:white;"></h2>
+          </div>
+          <!-- Empty column to create separation -->
+          <div class="col">
+          </div>
+          <!-- Displays date -->
+          <div class="col">
+            <h2 id="date" style="color:white;"></h2>
+          </div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <!-- MIDDLE ROW: QUESTION -->
+        <h1 id="question" style="color:white;" ></h1>
+        <br><br><br><br><br><br>
+        <!-- BOTTOM ROW: SLIDER -->
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

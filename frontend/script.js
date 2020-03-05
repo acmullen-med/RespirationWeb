@@ -19,7 +19,9 @@ function startTime() {
     
     var today = new Date();
     document.getElementById('date').innerHTML = (today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear();
+    document.getElementById('question').innerHTML = "Are you having increased trouble with breathing?";
 }
+
 // Checks whether the 'hour' of the time is between 1 and 9 (inclusive)
 function singleHour(i) {
     if (i < 10) {

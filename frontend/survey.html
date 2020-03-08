@@ -28,7 +28,7 @@
       <div class="col-lg-12 text-center">
         <br><br><br>
         <!-- TOP ROW: DATE AND TIME -->
-        <div class="row">
+        <div class="row" id="toprow">
           <div class="col">
             <!-- Displays time -->
             <h2 id="txt" style="color:white;"></h2>
@@ -46,9 +46,15 @@
         <h1 id="question" style="color:white;" ></h1>
         <br><br><br><br><br><br>
         <!-- BOTTOM ROW: SLIDER -->
-        <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        </div>
+        <!-- Left side of slider -->
+        <span style="color:green;"><big><big><big><big>Yes</big></big></big></big></span>
+        <!-- Slider content -->
+        <input type="range" style="width: 400px;" id="weight" min="0" value="1" max="2" step="1" list="yesorno">
+        <datalist id="yesorno">
+          <option>0</option> <option>1</option> <option>2</option>
+        </datalist>
+        <!-- Right side of slider -->
+        <span style="color:red;"><big><big><big><big>No</big></big></big></big></span>
       </div>
     </div>
   </div>

@@ -11,6 +11,9 @@
 
   <title>RespirationWebApp</title>
 
+  <!--BOOTSTRAP VERSION: 4.3.1 -->
+  <!--AUTHORS: contributers to the template at https://startbootstrap.com/templates/bare/ -->
+  
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap core JavaScript -->
@@ -43,7 +46,7 @@
         </div>
         <br><br><br><br><br><br><br><br>
         <!-- MIDDLE ROW: QUESTION -->
-        <h1 id="question" style="color:white;" ></h1>
+        <h1 id="displayQuestion" style="color:white;" >.</h1>
         <br><br><br><br><br><br>
         <!-- BOTTOM ROW: SLIDER -->
         <!-- Left side of slider -->
@@ -55,6 +58,23 @@
         </datalist>
         <!-- Right side of slider -->
         <span style="color:red;"><big><big><big><big>No</big></big></big></big></span>
+        <br><br><br><br><br>
+        <!-- Dropdown to select a question number and display the corresponding question -->
+        <label for="selectQuestions">Choose a question:</label>
+          <select id="selectQuestions" onchange="displayQuestion()">
+            <option id="q0"> </option>
+            <option id="q1">1</option>
+            <option id="q2">2</option>
+            <option id="q3">3</option>
+            <option id="q4">4</option>
+            <option id="q5">5</option>
+            <option id="q6">6</option>
+            <option id="q7">7</option>
+            <option id="q8">8</option>
+            <option id="q9">9</option>
+            <option id="q10">10</option>
+            <option id="q11">11</option>
+        </select>
       </div>
     </div>
   </div>

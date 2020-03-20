@@ -56,7 +56,6 @@ function createQuestionMap() {
 
 // Displays a question based on which number the user chooses from the drop down
 function displayQuestion() {
-    setSliderWidth();
     createQuestionMap();
     var num = document.getElementById("selectQuestions").value;
     document.getElementById("displayQuestion").innerHTML = questionMap.get(num);

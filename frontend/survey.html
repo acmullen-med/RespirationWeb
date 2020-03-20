@@ -8,6 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 
   <title>RespirationWebApp</title>
 
@@ -52,15 +53,16 @@
         <!-- Left side of slider -->
         <span style="color:green;"><big><big><big><big>Yes</big></big></big></big></span>
         <!-- Slider content -->
-        <input type="range" style="width: 400px;" id="weight" min="0" value="1" max="2" step="1" list="yesorno">
+        <!-- <input type="range" style="width: 400px;" id="weight" min="0" value="1" max="2" step="1" list="yesorno">
         <datalist id="yesorno">
           <option>0</option> <option>1</option> <option>2</option>
-        </datalist>
+        </datalist> -->
+        <input type="range" value="50"> <!--THIS IS THE NEW SLIDER-->
         <!-- Right side of slider -->
         <span style="color:red;"><big><big><big><big>No</big></big></big></big></span>
         <br><br><br><br><br>
         <!-- Dropdown to select a question number and display the corresponding question -->
-        <label for="selectQuestions">Choose a question:</label>
+        <label for="selectQuestions" style="color:white;">Choose a question:</label>
           <select id="selectQuestions" onchange="displayQuestion()">
             <option id="q0"> </option>
             <option id="q1">1</option>

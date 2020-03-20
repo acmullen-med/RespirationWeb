@@ -1,3 +1,4 @@
+// Main variable to match question numbers with questions
 var questionMap = new Map();
 
 // Calculates the current time (updates every minute)

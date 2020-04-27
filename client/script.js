@@ -63,5 +63,11 @@ function displayQuestion() {
 
 // Set width of the slider to be half of the screen size
 function setSliderWidth() {
-    document.getElementById("slider").style.width = parseInt(screen.width)/2 + 'px';
+    document.getElementById("slider").style.width = parseInt(window.innerWidth)/2 + 'px';
+}
+
+// Get range slider value
+function getSliderValue() {
+    var slidervalue = document.getElementById("slider").value;
+    document.getElementById("slidertext").innerHTML = slidervalue;
 }

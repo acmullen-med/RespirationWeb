@@ -45,18 +45,20 @@
             <h2 id="date" style="color:white;"></h2>
           </div>
         </div>
-        <br><br><br><br><br><br><br><br>
+        <br><br><br><br>
         <!-- MIDDLE ROW: QUESTION -->
         <h1 id="displayQuestion" style="color:white;" >.</h1>
-        <br><br><br><br><br><br>
+        <br><br><br><br><br>
         <!-- BOTTOM ROW: SLIDER -->
         <!-- Left side of slider -->
         <span style="color:green;"><big><big><big><big>Yes</big></big></big></big></span>
         <!-- Slider content -->
-        <input id="slider" type="range" value="50">
+        <input id="slider" type="range" min="1" max="100" value="50">
         <!-- Right side of slider -->
         <span style="color:red;"><big><big><big><big>No</big></big></big></big></span>
         <br><br><br><br><br>
+        <button type="button" onclick="getSliderValue()">Get slider value</button>
+        <p id="slidertext" style="color:white;">.</p> 
         <!-- Dropdown to select a question number and display the corresponding question -->
         <label for="selectQuestions" style="color:white;">Choose a question:</label>
           <select id="selectQuestions" onchange="displayQuestion()">
